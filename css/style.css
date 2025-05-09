@@ -1,0 +1,291 @@
+/* --------------------------------------------------------------- */
+/* CSS for a Simple Blog Layout */
+/* Base Styles */
+/* --------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Navbar */
+header {
+  background-color: black;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.sitetitle {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #05a0c3;
+}
+
+/* ----------------------------------------------------------------- */
+/* Main Layout */
+/* ----------------------------------------------------------------- */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex: 1;
+}
+
+.hero {
+  background-color: #eaeaea;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 1rem auto;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: none;
+}
+
+/* ----------------------------------------------------------------- */
+/* Blog Posts */
+/* ----------------------------------------------------------------- */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-posts article {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-posts h3 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.blog-posts p {
+  margin-bottom: 1rem;
+}
+
+.blog-posts a {
+  color: #05a0c3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-posts a:hover {
+  color: #004b87
+}
+
+/* ----------------------------------------------------------------- */
+/* About Page styling */
+/* ----------------------------------------------------------------- */
+.about {
+  background: linear-gradient(135deg, #f5f7fa, #e2e6ec);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.9;
+  transition: background 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.about:hover {
+  background: linear-gradient(135deg, #e2e6ec, #f5f7fa);
+}
+
+.about h2 {
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  font-size: 2rem;
+  border-left: 6px solid #05a0c3;
+  padding-left: 0.75rem;
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.about-extra h3 {
+  margin-top: 2rem;
+  color: #222;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.4rem;
+}
+
+.about-extra ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-extra ul li::before {
+  content: '🔹';
+  margin-right: 0.6rem;
+  color: #05a0c3;
+}
+
+.about-extra p {
+  font-style: italic;
+  color: #444;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.social-links li {
+  list-style: none;
+}
+
+.social-links a {
+  color: #05a0c3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #004b87;
+}
+
+/* ----------------------------------------------------------------- */
+/* Fade-in Animations on the page */
+/* ----------------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------------------- */
+/* Contacts Page */
+/* ----------------------------------------------------------------- */
+.contact {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background-color: #05a0c3;
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #005fa3;
+}
+
+/* ----------------------------------------------------------------- */
+/* Footer section */
+/* ----------------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: black;
+  color: #555;
+  margin-top: auto;
+  border-radius: 20px;
+}
+/* ----------------------------------------------------------------- */
+/* Responsive Design */
+/* ----------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .slider {
+    height: 200px;
+  }
+
+  .slide {
+    height: 200px;
+  }
+}
